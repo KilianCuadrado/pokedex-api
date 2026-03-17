@@ -26,14 +26,15 @@ Educational project demonstrating modern JavaScript fundamentals: async/await, D
 ## 📁 Project Structure
 
 ```
-pokedex-api/
+src/
 ├── index.html              (Main structure)
 ├── js/
 │   └── pokemons.js        (Fetch, DOM manipulation, events)
+    └── data/
+        └── pokemon.json 
 ├── css/
 │   └── pokemon.css        (Responsive grid, animations)
-└── js/data/
-    └── pokemon.json       (150+ Pokémon data)
+      (150+ Pokémon data)
 ```
 
 ## 🚀 Quick Start
