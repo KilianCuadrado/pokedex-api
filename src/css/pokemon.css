@@ -1,0 +1,215 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #ff4b4b 0, #b00020 35%, #210006 100%);
+  color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+
+main {
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem 1rem;
+}
+
+
+#container-pokemons {
+  background: linear-gradient(145deg, #e0e7ff, #f9fafb);
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+  padding: 1.5rem;
+  border: 4px solid #111827;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  position: relative;
+}
+
+
+#container-pokemons::before,
+#container-pokemons::after {
+  content: "";
+  position: absolute;
+  border-radius: 999px;
+}
+
+#container-pokemons::before {
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle at 30% 30%, #ffffff, #38bdf8 40%, #0f172a 100%);
+  top: -20px;
+  left: 20px;
+  border: 3px solid #111827;
+}
+
+#container-pokemons::after {
+  width: 14px;
+  height: 14px;
+  background: radial-gradient(circle at 30% 30%, #ffffff, #facc15 40%, #92400e 100%);
+  top: -10px;
+  left: 75px;
+  box-shadow:
+    22px 0 0 0 #22c55e,
+    44px 0 0 0 #ef4444;
+}
+
+
+.pokemon-card {
+  background: linear-gradient(135deg, #ef4444, #b91c1c);
+  border-radius: 18px;
+  padding: 0.9rem 0.9rem 1.1rem;
+  border: 3px solid #111827;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.45rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.17s ease-out, box-shadow 0.17s ease-out, translate 0.17s ease-out;
+}
+
+
+.pokemon-card::before {
+  content: "";
+  position: absolute;
+  inset: 0.5rem;
+  border-radius: 12px;
+  border: 2px solid rgba(248, 250, 252, 0.13);
+  pointer-events: none;
+}
+
+
+.pokemon-card::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 60%;
+  right: 7px;
+  top: 20%;
+  border-radius: 999px;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(15, 23, 42, 0.5),
+    rgba(15, 23, 42, 0.5) 4px,
+    transparent 4px,
+    transparent 8px
+  );
+  opacity: 0.5;
+}
+
+
+.pokemon-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.65);
+}
+
+
+.img-card {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: radial-gradient(circle at top, #ffffff, #d1fae5);
+  border-radius: 12px;
+  padding: 0.6rem;
+  border: 3px solid #111827;
+  box-shadow: inset 0 0 0 2px rgba(15, 23, 42, 0.4);
+}
+
+
+.num-pokedex {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fee2e2;
+  opacity: 0.9;
+}
+
+.pokemon-name {
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #fefce8;
+  margin-top: 0.1rem;
+}
+
+
+.pokemon-type {
+  margin-top: 0.2rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.65rem;
+  align-self: flex-start;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.9);
+  color: #e5e7eb;
+  box-shadow: 0 0 0 2px rgba(248, 250, 252, 0.15);
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+@media (max-width: 768px) {
+  main {
+    padding: 1.2rem 0.6rem;
+  }
+
+  #container-pokemons {
+    padding: 1.1rem;
+    gap: 1rem;
+  }
+
+  .pokemon-card {
+    padding: 0.75rem 0.75rem 1rem;
+  }
+
+  .pokemon-name {
+    font-size: 1rem;
+  }
+
+  .pokemon-type {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #container-pokemons {
+    border-width: 3px;
+  }
+
+  .pokemon-card {
+    border-width: 2px;
+  }
+
+  .img-card {
+    border-width: 2px;
+  }
+}
+#formulari-pokemon{
+  color:#ef4444;
+  text-align: center;
+  padding: 40px;
+}
+#formulari-pokemon input{
+  margin-bottom: 5px;
+
+}
