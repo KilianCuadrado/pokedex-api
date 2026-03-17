@@ -1,0 +1,18 @@
+{
+  "name": "pokedex-api",
+  "version": "1.0.0",
+  "description": "Interactive Pokedex with real-time search and filtering",
+  "main": "js/pokemons.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "keywords": ["pokemon", "pokedex", "search", "filter"],
+  "author": "Kilian Cuadrado",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  }
+}
